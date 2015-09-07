@@ -1,7 +1,7 @@
 Mobile Export Script for Illustrator
 =================================
 
-Script for exporting Illustrator artboards to Android and iOS PNG24 assets in the proper directory structure and scale types. 
+Script for exporting Illustrator artboards to Android and iOS PNG24 assets in the proper directory structure and scale types.
 
 How To
 ---
@@ -9,12 +9,11 @@ How To
 
 > To include a script in the Scripts menu (File > Scripts), save the script in the Scripts folder, located in the `/lllustrator CC/Presets` folder in your lllustrator CC installation directory. The script’s filename, minus the file extension, appears in the Scripts menu. Scripts that you add to the Scripts folder while Illustrator is running do not appear in the Scripts menu until the next time you launch Illustrator.
 
-2. Open the Illustrator file that includes the artboards you want to export.
-3. Select this script from the Illustrator Scripts menu.
-4. Choose the directory where you want the images to be exported to.
-5. A dialog with the supported scale types will open. If any Android types are selected, the proper directory will be created inside `/Android/{SCALE_TYPE}` (e.g. `/Android/drawable-mdpi`, `/Android/drawable-xhdpi`). Any iOS types will be in `/iOS`.
+1. Open the Illustrator file that includes the artboards you want to export.
+2. Select this script from the Illustrator Scripts menu.
+3. A dialog with the supported scale types will open. If any Android types are selected, the proper directory will be created inside `/Android/{SCALE_TYPE}` (e.g. `/Android/drawable-mdpi`, `/Android/drawable-xhdpi`). Any iOS types will be in `/iOS`.
 
-The name of the images will correspond to the name of the artboard. If the artboard is named `app-icon`, and you select all the available options, the script will export the artboard into the following directory structure.
+The name of the images will correspond to the name of the artboard. If the artboard is named `app-icon`, and you select all the available options, the script will export the artboard into the following directory structure. The default directory path is same as the Illustrator file of the target. The directory path can be changed in the property-tab.
 ```
 Selected Directory
 ├───Android
@@ -34,7 +33,9 @@ Selected Directory
     └───app-icon@3x.png
 ```
 
-The baseline image used for Android is `xhdpi`, for iOS it is `@2x`. The script will scale up and down from these sizes.
+!["screen shot"](20150907115040.png "screen shot")
+
+The default baseline image used for Android is `xhdpi`, for iOS it is `@2x`. The script will scale up and down from these sizes.
 
 
 License
